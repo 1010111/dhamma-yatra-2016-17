@@ -28,6 +28,7 @@ jQuery(document).ready(function($){
 	
 	$.getJSON('js/itinerary.json', function(data){
 		$.each( data, function( key, val ) {
+			console.log('key:'+key+', val:'+val);
 			itineraries.push(val);
 		});
 	}).done(function(){

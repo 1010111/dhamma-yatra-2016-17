@@ -32,6 +32,7 @@ jQuery(document).ready(function($){
 		});
 	}).done(function(){
 		$('.cd-timeline-content').each(function( index ) {
+			console.log('looping');
 			var itinerary = itineraries[index];
 			var title = itinerary['title'];
 			var shortContent = itinerary['content'].substr(0,100);

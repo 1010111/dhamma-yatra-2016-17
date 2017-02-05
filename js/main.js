@@ -28,12 +28,11 @@ jQuery(document).ready(function($){
 	
 	$.getJSON('js/itinerary.json', function(data){
 		$.each( data, function( key, val ) {
-			console.log('loop a loop');
+			console.log(val);
 			itineraries.push(val);
 		});
 	}).done(function(){
 		$('.cd-timeline-content').each(function( index ) {
-			console.log('looping');
 			var itinerary = itineraries[index];
 			var title = itinerary['title'];
 			var shortContent = itinerary['content'].substr(0,100);

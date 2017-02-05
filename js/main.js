@@ -28,11 +28,15 @@ jQuery(document).ready(function($){
 	
 	$.getJSON('js/itinerary.json', function(data){
 		$.each( data, function( key, val ) {
-			itineraries = val;
+			itineraries.push(val);
 		});
 	}).done(function(){
-		$('.cd-read-more').each(function( index ) {
-			console.log( itineraries[index] );
+		$('.cd-timeline-content').each(function( index ) {
+			var itinerary = itineraries[index];
+			var title = itinerary['title'];
+			var shortContent = itinerary['content'].substr(0,100);
+			$(this).find('h2').text(title);
+			$(this).find('p').text(shortContent);
 		});
 	});
 });

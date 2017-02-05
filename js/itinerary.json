@@ -1,7 +1,9 @@
 {
-"ABC",
-"DEF",
-"GHI",
-"JKL",
-"MNO"
+  "day": [
+    "ABC",
+    "DEF",
+    "GHI",
+    "JKL",
+	"MNO"
+  ]
 }
